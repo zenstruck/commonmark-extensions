@@ -46,7 +46,7 @@ final class AdmonitionRenderer implements NodeRendererInterface
      */
     public function render(Node $node, ChildNodeRendererInterface $childRenderer): string|\Stringable|null
     {
-        if (!$parsed = $this->parseBlockQuote($node)) {
+        if (!$parsed = self::parseBlockQuote($node)) {
             return null;
         }
 
@@ -67,7 +67,7 @@ final class AdmonitionRenderer implements NodeRendererInterface
     /**
      * @return array{Text,string}|null
      */
-    private function parseBlockQuote(Node $node): ?array
+    private static function parseBlockQuote(Node $node): ?array
     {
         $textNode = $node->firstChild()?->firstChild();
 

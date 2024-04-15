@@ -1,0 +1,21 @@
+- {#first}===Tab item 1
+
+    List item 1 content
+
+- {#second}===Tab item 2
+
+    Tab item 2 content
+
+- {#third}===Tab item 3
+
+    Tab item 3 content
+
+    more content
+--==--
+<div class="md-tabbed"><ul class="md-tabbed-tabs" role="tablist"><li class="md-tabbed-tab" role="presentation"><button id="first" class="md-tabbed-tab-trigger active" type="button" role="tab" aria-selected="true" aria-controls="first-panel">Tab item 1</button></li>
+<li class="md-tabbed-tab" role="presentation"><button id="second" class="md-tabbed-tab-trigger" type="button" role="tab" aria-selected="false" aria-controls="second-panel">Tab item 2</button></li>
+<li class="md-tabbed-tab" role="presentation"><button id="third" class="md-tabbed-tab-trigger" type="button" role="tab" aria-selected="false" aria-controls="third-panel">Tab item 3</button></li></ul>
+<div class="md-tabbed-panels"><div id="first-panel" class="md-tabbed-panel active" role="tabpanel" tabindex="0" aria-labelledby="first"><p>List item 1 content</p></div>
+<div id="second-panel" class="md-tabbed-panel" role="tabpanel" tabindex="0" aria-labelledby="second"><p>Tab item 2 content</p></div>
+<div id="third-panel" class="md-tabbed-panel" role="tabpanel" tabindex="0" aria-labelledby="third"><p>Tab item 3 content</p>
+<p>more content</p></div></div></div>

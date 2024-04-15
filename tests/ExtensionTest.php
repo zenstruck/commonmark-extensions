@@ -12,11 +12,13 @@
 namespace Zenstruck\CommonMark\Extension\Tests;
 
 use League\CommonMark\Environment\Environment;
+use League\CommonMark\Extension\Attributes\AttributesExtension;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
 use League\CommonMark\Extension\ExtensionInterface;
 use League\CommonMark\MarkdownConverter;
 use PHPUnit\Framework\TestCase;
 use Zenstruck\CommonMark\Extension\GitHub\AdmonitionExtension;
+use Zenstruck\CommonMark\Extension\TabbedExtension;
 
 /**
  * @author Kevin Bond <kevinbond@gmail.com>
@@ -33,6 +35,7 @@ final class ExtensionTest extends TestCase
     {
         $environment = new Environment();
         $environment->addExtension(new CommonMarkCoreExtension());
+        $environment->addExtension(new AttributesExtension());
         $environment->addExtension(new $extension());
 
         $converter = new MarkdownConverter($environment);
@@ -48,5 +51,6 @@ final class ExtensionTest extends TestCase
     public static function functionalProvider(): iterable
     {
         yield 'github_admonition' => [AdmonitionExtension::class, 'github_admonition.test'];
+        yield 'tabbed' => [TabbedExtension::class, 'tabbed.test'];
     }
 }
