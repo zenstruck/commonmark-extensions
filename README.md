@@ -8,6 +8,8 @@ composer require zenstruck/commonmark-extensions
 
 ## GFM Admonitions (Notes)
 
+![Sample](doc/github_admonition.png)
+
 The `AdmonitionExtension` adds support for [GFM style admonitions](https://github.com/orgs/community/discussions/16925).
 
 Enable the extension:
@@ -42,7 +44,9 @@ Renders as:
 > [!NOTE]
 > See [this sample CSS file](doc/github-admonitions.css) to style the admonitions similar to GitHub.
 
-## Tabbed
+## Tabbed Content
+
+![Sample](doc/tabbed.png)
 
 The `TabbedExtension` adds support for "tabbed" content.
 
@@ -116,5 +120,5 @@ Renders as:
 > You can customize the theme as an array passed to `TabbedExtension::__construct()`.
 > See `TabbedExtension::THEMES` for details.
 >
-> A working bootstrap theme is provided. Use the `TabbedExtension::bootstrapTheme()`
-> named constructor to use.
+> A working bootstrap theme is provided. Construct the extension with the
+> `TabbedExtension::bootstrapTheme()` named constructor to use.
